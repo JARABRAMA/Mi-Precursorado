@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.compose)
+  id("com.google.devtools.ksp")
 }
 
 android {
@@ -38,6 +39,10 @@ android {
 }
 
 dependencies {
+  implementation(libs.androidx.room.runtime)
+  ksp(libs.androidx.room.compiler)
+  annotationProcessor(libs.androidx.room.compiler)
+
   implementation(platform(libs.androidx.compose.bom))
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.material3)
