@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.jarabrama.miprecursorado.presistence.entities.PreachingDayEntity
-import java.util.Date
+import java.time.LocalDate
 import kotlin.time.Duration
 
 @Dao
@@ -20,11 +20,11 @@ interface PreachingDayDao {
   fun findPreachingDayByYearAndMonth(year: Int, month: Int): List<PreachingDayEntity>;
 
   @Query("SELECT * FROM preaching_days WHERE date = :date")
-  fun findByDate(date: Date): PreachingDayEntity?
+  fun findByDate(date: LocalDate): PreachingDayEntity?
 
   @Insert
   fun insert(preachingDay: PreachingDayEntity)
 
   @Query("UPDATE preaching_days SET duration = :duration WHERE date = :date")
-  fun updateDuration(date: Date, duration: Duration);
+  fun updateDuration(date: LocalDate, duration: Duration);
 }

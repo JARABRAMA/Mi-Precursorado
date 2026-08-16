@@ -1,11 +1,12 @@
 package com.jarabrama.miprecursorado.domain.model
 
 import java.time.Duration
-import java.util.Date
+import java.time.LocalDate
+
 import java.util.UUID
 
 data class PreachingDay(
   val id: UUID,
-  val date: Date,
+  val date: LocalDate,
   val preachingDuration: Duration,
 )
