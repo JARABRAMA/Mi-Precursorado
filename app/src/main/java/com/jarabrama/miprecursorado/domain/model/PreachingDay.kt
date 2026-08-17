@@ -6,7 +6,7 @@ import java.time.LocalDate
 import java.util.UUID
 
 data class PreachingDay(
-  val id: UUID,
+  val id: UUID? = null,
   val date: LocalDate,
   val preachingDuration: Duration,
 )
