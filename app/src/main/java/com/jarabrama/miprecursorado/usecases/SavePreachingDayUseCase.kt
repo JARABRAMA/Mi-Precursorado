@@ -14,13 +14,15 @@ class SavePreachingDayUseCase(
 ) {
   @RequiresApi(Build.VERSION_CODES.O)
   fun execute(date: LocalDate, duration: Duration) {
+    val now = LocalDate.now()
+    if (date.isAfter(now)) {
+      throw InvalidDateException("No se puede registrar un día posterior a la fecha actual")
+    }
+
     val alreadyExists = repository.findByDate(date) != null
     if (alreadyExists) {
       throw PreachingDayAlreadyExistsException("Este día ya tiene un tiempo registrado. Si continúas, el nuevo tiempo se sumará al tiempo registrado anteriormente. ¿Deseas continuar?")
     }
-    val now = LocalDate.now()
-    if (date.dayOfYear > now.dayOfYear)
-      throw InvalidDateException("No se puede registrar un día posterior a la fecha actual")
 
     val newPreachingDay = PreachingDay(date = date, preachingDuration = duration)
     repository.save(newPreachingDay)
