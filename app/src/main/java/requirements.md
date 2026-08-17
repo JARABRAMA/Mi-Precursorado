@@ -40,6 +40,11 @@ This app helps pioneers (precursors) manage their preaching hours.
 - And: the user clicks 'Aceptar' when the alert appears
 - Then: the new time is added to the previously registered time
 
+### Scenario: User saves a preaching day with a day of year superior to current 
+- Given: the user registers a new time for a day
+- When: the date's day is after the current day
+- Then: the app shows an alert with the message 'No se puede registrar un día posterior a la fecha actual'
+
 ### Scenario: User cancels adding time to an existing day
 - Given: the user registers a new time for a day
 - When: the day is already in the database
