@@ -12,8 +12,10 @@ mockitoCore = "5.23.0"
 mockitoJunitJupiter = "5.23.0"
 mockitoKotlin = "6.3.0"
 roomRuntime = "2.8.4"
+uiTextGoogleFonts = "1.12.0"
 
 [libraries]
+androidx-compose-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
