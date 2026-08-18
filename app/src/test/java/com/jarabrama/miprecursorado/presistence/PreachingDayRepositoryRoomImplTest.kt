@@ -24,9 +24,9 @@ import java.util.UUID
 class PreachingDayRepositoryRoomImplTest {
 
   @Mock
-  private lateinit var dao: PreachingDayDao;
+  private lateinit var dao: PreachingDayDao
 
-  private lateinit var mapper: PreachingDayEntityMapper;
+  private lateinit var mapper: PreachingDayEntityMapper
 
   private lateinit var repository: PreachingDayRepositoryRoomImpl
 

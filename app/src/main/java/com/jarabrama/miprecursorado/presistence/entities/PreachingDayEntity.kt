@@ -1,7 +1,5 @@
 package com.jarabrama.miprecursorado.presistence.entities
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey

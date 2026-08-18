@@ -36,7 +36,7 @@ class PreachingDayRepositoryRoomImpl(
 
   @RequiresApi(Build.VERSION_CODES.O)
   override fun save(preachingDay: PreachingDay) {
-    val now = LocalDateTime.now();
+    val now = LocalDateTime.now()
     val entity = PreachingDayEntity(
       id= UUID.randomUUID(),
       date = preachingDay.date,

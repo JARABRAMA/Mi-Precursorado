@@ -17,7 +17,7 @@ interface PreachingDayDao {
     AND strftime('%m', date) = :month
   """
   )
-  fun findPreachingDayByYearAndMonth(year: Int, month: Int): List<PreachingDayEntity>;
+  fun findPreachingDayByYearAndMonth(year: Int, month: Int): List<PreachingDayEntity>
 
   @Query("SELECT * FROM preaching_days WHERE date = :date")
   fun findByDate(date: LocalDate): PreachingDayEntity?
@@ -26,8 +26,8 @@ interface PreachingDayDao {
   fun insert(preachingDay: PreachingDayEntity)
 
   @Query("UPDATE preaching_days SET duration = :duration WHERE date = :date")
-  fun updateDuration(date: LocalDate, duration: Duration);
+  fun updateDuration(date: LocalDate, duration: Duration)
 
   @Query("UPDATE preaching_days SET updatedAt = :updateDate WHERE date = :date")
-  fun updateUpdatedAt(date: LocalDate, updateDate: LocalDate?);
+  fun updateUpdatedAt(date: LocalDate, updateDate: LocalDate?)
 }
