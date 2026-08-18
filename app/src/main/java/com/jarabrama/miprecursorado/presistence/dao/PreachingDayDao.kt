@@ -6,7 +6,6 @@ import androidx.room.Query
 import com.jarabrama.miprecursorado.presistence.entities.PreachingDayEntity
 import java.time.LocalDate
 import java.time.Duration
-import java.time.LocalDateTime
 
 @Dao
 interface PreachingDayDao {
@@ -30,5 +29,5 @@ interface PreachingDayDao {
   fun updateDuration(date: LocalDate, duration: Duration);
 
   @Query("UPDATE preaching_days SET updatedAt = :updateDate WHERE date = :date")
-  fun updateUpdatedAt(date: LocalDate, updateDate: LocalDateTime);
+  fun updateUpdatedAt(date: LocalDate, updateDate: LocalDate?);
 }
