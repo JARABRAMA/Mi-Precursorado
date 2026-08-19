@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Mi Precursorado</string>
+
+    <string name="monday">Lunes</string>
+    <string name="Tuesday">Martes</string>
+    <string name="wednesday">Miercoles</string>
+    <string name="thursday">Jueves</string>
+    <string name="friday">Viernes</string>
+    <string name="saturday">Sábado</string>
+    <string name="sunday">Domingo</string>
+
 </resources>
