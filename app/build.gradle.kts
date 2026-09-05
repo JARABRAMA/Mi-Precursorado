@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+  implementation(libs.androidx.compose.foundation.layout)
   implementation(libs.androidx.compose.ui.text.google.fonts)
   implementation(libs.androidx.room.runtime)
   ksp(libs.androidx.room.compiler)
@@ -65,6 +66,5 @@ dependencies {
   // Source: https://mvnrepository.com/artifact/org.mockito.kotlin/mockito-kotlin
   testImplementation(libs.mockito.kotlin)
 
-  // Source: https://mvnrepository.com/artifact/androidx.compose.ui/ui-text-google-fonts
-  runtimeOnly(libs.androidx.compose.ui.text.google.fonts)
+
 }

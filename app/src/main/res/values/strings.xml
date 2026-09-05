@@ -8,5 +8,9 @@
     <string name="friday">Viernes</string>
     <string name="saturday">Sábado</string>
     <string name="sunday">Domingo</string>
+    <string name="horas">%d horas</string>
+    <string name="minutos">%d minutos</string>
+    <string name="total_del_mes">Total del mes</string>
+    <string name="no_horas_aun">No tienes horas registradas aún</string>
 
 </resources>
