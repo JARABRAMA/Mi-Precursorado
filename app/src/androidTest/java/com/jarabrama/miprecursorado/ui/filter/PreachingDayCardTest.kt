@@ -3,6 +3,7 @@ package com.jarabrama.miprecursorado.ui.filter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import com.jarabrama.miprecursorado.ui.components.filter.PreachingDayCard
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

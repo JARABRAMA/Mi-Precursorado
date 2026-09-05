@@ -1,4 +1,4 @@
-package com.jarabrama.miprecursorado.ui.filter
+package com.jarabrama.miprecursorado.ui.components.filter
 
 import android.content.res.Configuration
 import android.os.Build

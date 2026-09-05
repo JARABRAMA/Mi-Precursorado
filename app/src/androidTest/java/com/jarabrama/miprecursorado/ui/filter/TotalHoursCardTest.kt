@@ -4,6 +4,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import com.jarabrama.miprecursorado.R
+import com.jarabrama.miprecursorado.ui.components.filter.TotalHoursCard
 import org.junit.Rule
 import org.junit.Test
 import java.time.Duration
