@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jarabrama.miprecursorado.R
@@ -32,7 +33,7 @@ import com.jarabrama.miprecursorado.ui.utils.getDayOfTheWeekString
 import java.time.Duration
 import java.time.LocalDate
 
-@RequiresApi(Build.VERSION_CODES.O)
+@RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun PreachingDayCard(date: LocalDate, duration: Duration) {
   Surface(
@@ -93,8 +94,8 @@ fun DurationString(duration: Duration) {
       painterResource(R.drawable.clock), "clock icon",
       modifier = Modifier.size(12.dp)
     )
-    Text(text = "${duration.toHoursPart()}h", style = MaterialTheme.typography.bodyMedium)
-    Text(text = "${duration.toMinutesPart()}m", style = MaterialTheme.typography.bodyMedium)
+    Text(text = stringResource(R.string.horas, duration.toHoursPart()), style = MaterialTheme.typography.bodyMedium)
+    Text(text = stringResource(R.string.minutos, duration.toMinutesPart()), style = MaterialTheme.typography.bodyMedium)
   }
 }
 
@@ -108,6 +109,6 @@ fun DurationString(duration: Duration) {
 @Composable
 fun PreviewPreachingDay() {
   AppTheme {
-    PreachingDayCard(LocalDate.now(), Duration.ofMinutes(120))
+    PreachingDayCard(LocalDate.now(), Duration.ofMinutes(125))
   }
 }
